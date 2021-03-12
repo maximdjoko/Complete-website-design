@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 800;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: #7a72d8;
+    transition: .5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 4.3em;
+    text-transform: capitalize;
+}
+
+.content p {
+    margin: 1.25em;
+    line-height: 1.5em;
+    font-weight: 200;
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 1.5em;
+    font-weight: bolder;
+    border: 2px solid #7a72d8;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+}
+
+span {
+    position: absolute;
+    background: #7a72d8;
+    height: 100%;
+    border-radius: 1.5em;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+button:hover {
+    border: none;
+}
+
+button:hover span {
+    width: 100%;
+}
